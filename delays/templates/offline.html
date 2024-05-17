@@ -1,0 +1,10 @@
+{% extends 'layouts/offline.html' %}
+{% load static %}
+{% block content %}
+
+    <div style="width: fit-content; margin:auto; display:flex; align-items: center; height: 100%; justify-content: center; flex-direction: column; row-gap:2rem">
+        <img src="{% static 'img/offline-image.svg' %}" alt="offline-image" width="50%">
+        <h1 class="fw-semibold text-muted">You are not connected!</h1>
+    </div>
+
+{% endblock %}

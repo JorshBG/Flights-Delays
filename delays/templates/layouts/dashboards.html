@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Dashboards
+{% endblock %}
+
+{% block content %}
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            {% block dashboard %}
+            {% endblock %}
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

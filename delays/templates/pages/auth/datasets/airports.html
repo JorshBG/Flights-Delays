@@ -1,0 +1,51 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block title %}Airports - Dataset{% endblock %}
+
+{% block content %}
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Airports</h1>
+        <a href="{% static 'files/Airports.csv' %}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Get CSV</a>
+    </div>
+    <div class="card card-info shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered datasets-datatable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+
+                    {% for airport in airports %}
+                        <tr>
+                            <td>{{ airport.code }}</td>
+                            <td>{{ airport.name }}</td>
+                            <td>{{ airport.latitude }}</td>
+                            <td>{{ airport.longitude }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

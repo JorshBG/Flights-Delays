@@ -1,0 +1,68 @@
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'index' %}">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-plane"></i>
+                </div>
+        <div class="sidebar-brand-text mx-3">Flight Delays</div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+
+    <!-- Nav Item - dashboards Collapse Menu -->
+    <li class="nav-item {% if tab == 'dashboards' %}active{% endif %}">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDashboards"
+           aria-expanded="true" aria-controls="collapseDashboards">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboards</span>
+        </a>
+        <div id="collapseDashboards" class="collapse" aria-labelledby="headingDashboards"
+             data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Tableau dashboards:</h6>
+                <a class="collapse-item" href="{% url 'ds-symbol-map' %}">Symbol map</a>
+                <a class="collapse-item" href="{% url 'ds-airlines-delays' %}">Delays by airlines</a>
+                <a class="collapse-item" href="{% url 'ds-averages' %}">Average and trend lines</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - datasets Collapse Menu -->
+    <li class="nav-item {% if tab == 'datasets' %}active{% endif %}">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDatasets"
+           aria-expanded="true" aria-controls="collapseDatasets">
+            <i class="fas fa-fw fa-database"></i>
+            <span>Datasets</span>
+        </a>
+        <div id="collapseDatasets" class="collapse" aria-labelledby="headingDatasets"
+             data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">CSV collections:</h6>
+                <a class="collapse-item" href="{% url 'dt-flights' %}">Flights</a>
+                <a class="collapse-item" href="{% url 'dt-airports' %}">Airports</a>
+                <a class="collapse-item" href="{% url 'dt-airlines' %}">Airlines</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item {% if tab == 'about' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'about' %}">
+            <i class="fas fa-fw fa-user"></i>
+            <span>About</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+</ul>
+<!-- End of Sidebar -->

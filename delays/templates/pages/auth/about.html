@@ -1,0 +1,81 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <!-- About 1 - Bootstrap Brain Component -->
+    <div class="card shadow m-auto" style="width: fit-content">
+        <div class="card-body">
+            <section class="py-3 py-md-5">
+                <div class="container">
+                    <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+                        <div class="col-12 col-lg-6 col-xl-5">
+                            <img class="img-fluid rounded" loading="lazy" src="{% static 'img/itsoeh.jpeg' %}"
+                                 alt="ITSOEH">
+                        </div>
+                        <div class="col-12 col-lg-6 col-xl-7">
+                            <div class="row justify-content-xl-center">
+                                <div class="col-12 col-xl-11">
+                                    <h2 class="mb-3">Who Are We?</h2>
+                                    <p class="lead fs-4 text-secondary mb-3">We are students of Western Superior
+                                        Technological Institute of the State of Hidalgo (ITSOEH, spanish acronym).</p>
+                                    <p class="mb-5">
+                                        We strive to develop quality software on every project throughout
+                                        our careers to continue to grow as professionals.
+                                        <br>
+                                        <br>
+                                        We are prepared with knowledge of high-level programming languages such as Java,
+                                        PHP, Python and JavaScript.
+                                        <br>
+                                        <br>
+                                        We handle relational database managers such as MySQL and SQLite. In addition, we
+                                        are problem solvers.</p>
+                                    <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                                        <div class="col-12 col-md-6">
+                                            <div class="d-flex">
+                                                <div class="me-4 text-primary">
+                                                    <img src="{% static 'img/boxes.svg' %}" alt="technologies"
+                                                         width="40px" height="40px">
+                                                </div>
+                                                <div>
+                                                    <h2 class="h4 mb-3">Technologies</h2>
+                                                    <ul class="text-secondary mb-0">
+                                                        <li>Python</li>
+                                                        <li>HTML, CSS and JavaScript</li>
+                                                        <li>Docker</li>
+                                                        <li>Django</li>
+                                                        <li>Auth0</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="d-flex">
+                                                <div class="me-4 text-primary">
+                                                    <img src="{% static 'img/settings.svg' %}" alt="settings"
+                                                         width="40px" height="40px">
+                                                </div>
+                                                <div>
+                                                    <h2 class="h4 mb-3">Settings</h2>
+                                                    <ul class="text-secondary mb-0">
+                                                        <li>SCRUM Framework</li>
+                                                        <li>Data Analytics</li>
+                                                        <li>Tableau</li>
+                                                        <li>EDA Methodology</li>
+                                                        <li>Git and GitHub</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}
